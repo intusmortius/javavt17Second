@@ -35,13 +35,13 @@ public class JdbcController {
 
         List<Director> listDirector = directorService.list();
         List<Film> listFilm = filmService.list();
-
+        System.out.println(listDirector.get(0));
         model.addAttribute("listFilm",listFilm);
         model.addAttribute("listDirector",listDirector);
         return "content";
     }
 
-    //CRUD operations with CarBrand entity
+    //CRUD operations with Director entity
     @RequestMapping(value = "/"+INSTRUMENT+"/addDirector", method = RequestMethod.GET)
     public String addDirector(ModelMap model) {
         model.addAttribute("title", TITLE);

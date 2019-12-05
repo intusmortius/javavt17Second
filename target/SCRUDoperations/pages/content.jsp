@@ -33,15 +33,15 @@
                         </div>
                         <table class="table table-striped table-condensed" id="car-brands">
                             <thead>
-                            <th><button class="sort" data-sort="director-last_name">Name</button></th>
+                            <th><button class="sort" data-sort="brand-name">Name</button></th>
                             <th><button class="sort" data-sort="founded-year">Surname</button></th>
                             <th><button class="sort" data-sort="headquarter">Year</button></th>
                             </thead>
                             <tbody align="center" class="list">
                             <c:forEach var="director" items="${listDirector}" varStatus="status">
                                 <tr>
-                                    <td class="director-last_name">${director.lastName}</td>
-                                    <td class="director-first">${director.firstName}</td>
+                                    <td class="brand-name">${director.lastName}</td>
+                                    <td class="brand-name">${director.firstName}</td>
                                     <td class="founded-year">${director.year}</td>
                                     <td class="action">
                                         <a href="${pageContext.request.contextPath}/${instrument}/edit-director/${director.idDirector}">Edit</a>
@@ -69,8 +69,8 @@
                             <tbody align="center" class="list">
                             <c:forEach var="film" items="${listFilm}" varStatus="status">
                                 <tr>
-                                    <td class="brand-name">${film.director.toString()}</td>
-                                    <td class="model-name">${film.name}</td>
+                                    <td class="brand-name">${film.name}</td>
+                                    <td class="model-name">${film.director.lastName}</td>
                                     <td class="production-year">${film.year}</td>
                                     <td>
                                         <a href="${pageContext.request.contextPath}/${instrument}/edit-film/${film.idFilm}">Edit</a>

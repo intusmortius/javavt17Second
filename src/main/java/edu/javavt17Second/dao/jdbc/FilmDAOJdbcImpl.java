@@ -28,7 +28,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
     public void saveOrUpdate(Film item) {
         if (item.getIdFilm() > 0) {
             // update
-            String sql = "UPDATE films SET director=?, name=?, year=?, WHERE id=?";
+            String sql = "UPDATE films SET director=?, name=?, year=? WHERE id=?";
             jdbcTemplate.update(sql, item.getIdDirector(), item.getName(),item.getYear(),
                      item.getIdFilm());
         } else {
@@ -73,9 +73,9 @@ public class FilmDAOJdbcImpl implements FilmDAO {
     private Film getFilmFromDB(ResultSet rs) throws SQLException{
         Film film = new Film();
         film.setIdFilm(rs.getInt("id"));
-        film.setIdDirector(rs.getInt("id"));
-        film.setDirector(directorDAO.get(rs.getInt("id")));
-        film.setName(rs.getString("Name"));
+        film.setIdDirector(rs.getInt("director"));
+        film.setDirector(directorDAO.get(rs.getInt("director")));
+        film.setName(rs.getString("name"));
         film.setYear(rs.getShort("year"));
         return film;
     }

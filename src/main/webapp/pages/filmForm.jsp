@@ -27,7 +27,7 @@
                     <form:form method="POST" modelAttribute="film" class="form-horizontal">
                         <form:hidden path="idFilm"/>
                         <div class="form-group">
-                            <label for="idDirector" class="col-sm-3 control-label" >Brand:</label>
+                            <label for="idDirector" class="col-sm-3 control-label" >Director:</label>
                             <div class="col-sm-9">
                                 <form:select path="idDirector" multiple="false" class="form-control">
                                     <c:forEach var="director" items="${listDirector}" varStatus="status">
@@ -44,13 +44,13 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-sm-3 control-label">Film:</label>
+                            <label for="name" class="col-sm-3 control-label">Film name:</label>
                             <div class="col-sm-9">
                                 <form:input path="name" class="form-control" required="required"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="year" class="col-sm-3 control-label">Generation:</label>
+                            <label for="year" class="col-sm-3 control-label">Year:</label>
                             <div class="col-sm-9">
                                 <form:input path="year" class="form-control"/>
                             </div>

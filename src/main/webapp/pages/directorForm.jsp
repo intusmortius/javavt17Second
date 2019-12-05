@@ -26,19 +26,19 @@
                     <form:form method="POST" modelAttribute="director" class="form-horizontal">
                         <form:hidden path="idDirector"/>
                         <div class="form-group">
-                            <label for="lastName" class="col-sm-3 control-label">Director name:</label>
+                            <label for="lastName" class="col-sm-3 control-label">Surname:</label>
                             <div class="col-sm-9">
                                 <form:input path="lastName" class="form-control" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="firstName" class="col-sm-3 control-label">Director name:</label>
+                            <label for="firstName" class="col-sm-3 control-label">Name:</label>
                             <div class="col-sm-9">
                                 <form:input path="firstName" class="form-control" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="year" class="col-sm-3 control-label">Founded year:</label>
+                            <label for="year" class="col-sm-3 control-label">Birth year:</label>
                             <div class="col-sm-9">
                                 <form:input path="year" class="form-control" type="number" min="1800" max="2050"  />
                             </div>

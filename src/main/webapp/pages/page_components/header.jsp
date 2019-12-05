@@ -25,8 +25,6 @@
                             <li><a href="${pageContext.request.contextPath}/jpa">JPA</a></li>
                         </ul>
                     </li>
-                    <li><a href="${pageContext.request.contextPath}/about">About</a></li>
-                    <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
